@@ -30,4 +30,9 @@ class AslabController extends Controller
         $roleAktif = 'aslab';
         return view('aslab.akun',['role' => $roleAktif]);
     }
+
+    public function lab(){
+        $roleAktif = 'aslab';
+        return view('aslab.lab',['role' => $roleAktif]);
+    }
 }
