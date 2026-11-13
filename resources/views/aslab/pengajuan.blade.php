@@ -1,13 +1,13 @@
 @extends('layout.master')
 @section('header')
-    <h2>Pengajuan</h2>
+    <h2>Daftar Pengajuan Peminjaman Lab</h2>
 @endsection
 @section('title')
     
 @endsection
 @section('card-header')
-    <h3></h3>
+    <h3>Daftar Pengajuan</h3>
 @endsection
 @section('card-body')
-    <p></p>
+    <p>berikut adalah daftar pengajuan peminjaman lab</p>
 @endsection
