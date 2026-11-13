@@ -17,7 +17,7 @@ Route::get('/', function () {
 //ASLAB
 Route::get('/pengajuan', [AslabController::class, 'pengajuan'])->name('pengajuan');
 Route::get('/status-lab-aslab', [AslabController::class, 'statuslab'])->name('status-lab-aslab');
-Route::get('/jadwal-tetap',[AslabController::class,'jadwaltetap'])->name('jadwal-tetap');
+Route::get('/jadwal-tetap', [AslabController::class, 'jadwaltetap'])->name('jadwal-tetap');
 Route::get('/riwayat-peminjaman', [AslabController::class, 'RiwayatPeminjaman'])->name('riwayat-peminjaman');
 Route::get('/akun-aslab', [AslabController::class, 'akun'])->name('akun-aslab');
 Route::get('/lab', [AslabController::class, 'lab'])->name('lab');
@@ -32,8 +32,10 @@ Route::get('/akun', [MahasiswaController::class, 'akun'])->name('akun');
 
 //AUTH
 // Register
-Route::get('/register',[RegisterController::class, 'form']);
-Route::post('/register',[RegisterController::class, 'registration']);
+Route::get('/register', [RegisterController::class, 'form']);
+Route::post('/register', [RegisterController::class, 'registration']);
 
 // Login
-Route::get('/login',[LoginController::class, 'form']);
+Route::get('/login', [LoginController::class, 'form'])->name('login');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
