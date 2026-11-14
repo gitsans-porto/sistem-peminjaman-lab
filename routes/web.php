@@ -4,7 +4,7 @@ use App\Http\Controllers\AslabController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MahasiswaController;
-
+use App\Http\Controllers\LabController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +20,7 @@ Route::get('/status-lab-aslab', [AslabController::class, 'statuslab'])->name('st
 Route::get('/jadwal-tetap', [AslabController::class, 'jadwaltetap'])->name('jadwal-tetap');
 Route::get('/riwayat-peminjaman', [AslabController::class, 'RiwayatPeminjaman'])->name('riwayat-peminjaman');
 Route::get('/akun-aslab', [AslabController::class, 'akun'])->name('akun-aslab');
-Route::get('/lab', [AslabController::class, 'lab'])->name('lab');
+Route::get('/lab-aslab', [AslabController::class, 'lab'])->name('lab-aslab');
 
 
 //MAHASISWA
@@ -36,6 +36,11 @@ Route::get('/register', [RegisterController::class, 'form']);
 Route::post('/register', [RegisterController::class, 'registration']);
 
 // Login
+Route::get('/login',[LoginController::class, 'form']);
+
+// CRUD Lab
+route::resource('lab', LabController::class);
+Route::patch('/labs/{lab}/toggle', [LabController::class, 'toggle'])->name('labs.toggle');
 Route::get('/login', [LoginController::class, 'form'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
