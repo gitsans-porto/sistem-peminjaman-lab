@@ -62,7 +62,7 @@
 
                     <div class="field">
                         <label for="email">Email</label>
-                        <input class="input" type="email" id="email" name="email" value="{{ old('email') }}" placeholder="nama@email.com" required>
+                        <input class="input" type="email" id="email" name="email" value="{{ old('email') }}" placeholder="nama@gmail.com" required>
                         @error('email')
                             <p class="field-error">{{ $message }}</p>
                         @enderror
@@ -115,7 +115,7 @@
 
             <div class="register-row">
                 <span>Sudah punya akun?</span>
-                <a class="link" href="{{ url('/login') }}">Masuk di sini</a>
+                <a class="link" href="{{ url('/login') }}">Login di sini</a>
             </div>
         </main>
     </div>
