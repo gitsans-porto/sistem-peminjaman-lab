@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="field">
-                        <label for="role">Jenis Pengguna</label>
+                        <label for="role">Role</label>
                         <select class="input" id="role" name="role" required>
                             <option value="" disabled {{ old('role') ? '' : 'selected' }}>Pilih Peran</option>
                             <option value="mahasiswa" {{ old('role') === 'mahasiswa' ? 'selected' : '' }}>Mahasiswa</option>
