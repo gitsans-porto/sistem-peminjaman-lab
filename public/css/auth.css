@@ -1,0 +1,95 @@
+ :root {
+     --navy: #0b2545;
+     --navy-hover: #081b33;
+     --blue-strong: #0056b3;
+     --blue-strong-hover: #004494;
+     --ink: #343a40;
+     --ink-secondary: #5c636a;
+     --surface: #ffffff;
+     --surface-sunken: #f8f9fa;
+     --border: #dee2e6;
+     --border-input: #8a929b;
+     --border-focus: #007bff;
+     --danger: #dc3545;
+     --danger-ink: #a71d2a;
+     --success-subtle: #d4edda;
+     --success-ink: #155724;
+     --radius: 4px;
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+     margin: 0;
+     background: var(--surface-sunken);
+     color: var(--ink);
+     font-family: Lato, ui-sans-serif, system-ui, sans-serif;
+ }
+
+ .login {
+     display: flex;
+     min-height: 100dvh;
+ }
+
+ .login-brand {
+     flex: 0 0 44.45%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 48px;
+     background: var(--navy);
+     color: #fff;
+ }
+
+ .brand-name {
+     margin: 0;
+     font-size: 20px;
+     line-height: 28px;
+     font-weight: 700;
+ }
+
+ .brand-campus {
+     margin: 8px 0 0;
+     font-size: 14px;
+     line-height: 22px;
+     color: rgba(255, 255, 255, .8);
+ }
+
+ .brand-headline {
+     margin: 0;
+     max-width: 544px;
+     font-size: 40px;
+     line-height: 48px;
+     font-weight: 700;
+ }
+
+ .brand-copy {
+     margin: 16px 0 0;
+     max-width: 544px;
+     font-size: 16px;
+     line-height: 26px;
+     color: rgba(255, 255, 255, .85);
+ }
+
+ .brand-foot {
+     margin: 0;
+     font-size: 12px;
+     line-height: 18px;
+     color: rgba(255, 255, 255, .7);
+ }
+
+ .brand-tagline {
+     display: none;
+ }
+
+ .login-form {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 16px;
+     padding: 24px;
+ }
