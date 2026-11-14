@@ -37,7 +37,7 @@
 
                 @if ($errors->any())
                     <div class="alert alert-danger" role="alert">
-                        <span>Tolong periksa kembali inputan Anda. Ada beberapa data yang belum valid.</span>
+                        <span>ada yang tidak benar woi!</span>
                     </div>
                 @endif
 
