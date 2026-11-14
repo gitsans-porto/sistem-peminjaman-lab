@@ -74,7 +74,7 @@
       <div class="sidebar-wrapper">
         <nav class="mt-2">
           <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu">
-           @if ($role == 'pengguna')
+           @if ($role == 'mahasiswa')
             @include('layout.sidebar-mahasiswa')
            @endif
            @if ($role == 'aslab')

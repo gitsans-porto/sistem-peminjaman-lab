@@ -41,6 +41,8 @@ Route::get('/login',[LoginController::class, 'form']);
 // CRUD Lab
 route::resource('lab', LabController::class);
 Route::patch('/labs/{lab}/toggle', [LabController::class, 'toggle'])->name('labs.toggle');
+
+
 Route::get('/login', [LoginController::class, 'form'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
