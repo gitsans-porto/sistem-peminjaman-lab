@@ -18,8 +18,7 @@
         <i class="nav-icon bi bi-list-task"></i>
         <p>Peminjaman Lab</p>
     </a>
-
-
+    
 </li>
 
 <li class="nav-item">
@@ -28,6 +27,7 @@
         <p>Data Lab</p>
     </a>
 </li>
+
 <li class="nav-item">
     <a href="{{ route('riwayat-peminjaman') }}" class="nav-link">
         <i class="nav-icon bi bi-clock-history"></i>
