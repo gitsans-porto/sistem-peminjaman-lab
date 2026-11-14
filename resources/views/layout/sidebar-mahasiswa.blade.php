@@ -13,7 +13,7 @@
 </li>
 
 <li class="nav-item">
-    <a href="{{ route('status-lab-aslab') }}" class="nav-link {{ request()->routeIs('status-lab-aslab') ? 'active' : '' }}">
+    <a href="{{ route('status-lab') }}" class="nav-link {{ request()->routeIs('status-lab') ? 'active' : '' }}">
         <i class="nav-icon bi bi-hdd-stack"></i>
         <p>Status Lab</p>
     </a>
