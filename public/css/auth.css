@@ -1,0 +1,359 @@
+ :root {
+     --navy: #0b2545;
+     --navy-hover: #081b33;
+     --blue-strong: #0056b3;
+     --blue-strong-hover: #004494;
+     --ink: #343a40;
+     --ink-secondary: #5c636a;
+     --surface: #ffffff;
+     --surface-sunken: #f8f9fa;
+     --border: #dee2e6;
+     --border-input: #8a929b;
+     --border-focus: #007bff;
+     --danger: #dc3545;
+     --danger-ink: #a71d2a;
+     --success-subtle: #d4edda;
+     --success-ink: #155724;
+     --radius: 4px;
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+ body {
+     margin: 0;
+     background: var(--surface-sunken);
+     color: var(--ink);
+     font-family: Lato, ui-sans-serif, system-ui, sans-serif;
+ }
+
+ .login {
+     display: flex;
+     min-height: 100dvh;
+ }
+
+ .login-brand {
+     flex: 0 0 44.45%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 48px;
+     background: var(--navy);
+     color: #fff;
+ }
+
+ .brand-name {
+     margin: 0;
+     font-size: 20px;
+     line-height: 28px;
+     font-weight: 700;
+ }
+
+ .brand-campus {
+     margin: 8px 0 0;
+     font-size: 14px;
+     line-height: 22px;
+     color: rgba(255, 255, 255, .8);
+ }
+
+ .brand-headline {
+     margin: 0;
+     max-width: 544px;
+     font-size: 40px;
+     line-height: 48px;
+     font-weight: 700;
+ }
+
+ .brand-copy {
+     margin: 16px 0 0;
+     max-width: 544px;
+     font-size: 16px;
+     line-height: 26px;
+     color: rgba(255, 255, 255, .85);
+ }
+
+ .brand-foot {
+     margin: 0;
+     font-size: 12px;
+     line-height: 18px;
+     color: rgba(255, 255, 255, .7);
+ }
+
+ .brand-tagline {
+     display: none;
+ }
+
+ .login-form {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 16px;
+     padding: 24px;
+ }
+
+ .login-card {
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+     width: 100%;
+     max-width: 400px;
+     padding: 24px;
+     background: var(--surface);
+     border: 1px solid var(--border);
+     border-radius: var(--radius);
+     box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+ }
+
+ .login-card h1 {
+     margin: 0;
+     font-size: 24px;
+     line-height: 32px;
+     font-weight: 700;
+ }
+
+ .card-sub {
+     margin: 0;
+     font-size: 14px;
+     line-height: 22px;
+     color: var(--ink-secondary);
+ }
+
+ .login-card form {
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+ }
+
+ .alert {
+     display: flex;
+     align-items: flex-start;
+     gap: 8px;
+     padding: 12px;
+     border-radius: var(--radius);
+     font-size: 14px;
+     line-height: 22px;
+ }
+
+ .alert svg {
+     flex: none;
+     margin-top: 2px;
+ }
+
+ .alert-danger {
+     background: var(--surface);
+     border: 1px solid var(--danger);
+     color: var(--danger-ink);
+ }
+
+ .alert-success {
+     background: var(--success-subtle);
+     border: 1px solid var(--success-ink);
+     color: var(--success-ink);
+ }
+
+ .field {
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+ }
+
+ .field label {
+     font-size: 14px;
+     line-height: 20px;
+     font-weight: 700;
+ }
+
+ .field-control {
+     position: relative;
+ }
+
+ .input {
+     width: 100%;
+     height: 44px;
+     padding: 0 12px;
+     font: inherit;
+     font-size: 16px;
+     color: var(--ink);
+     background: var(--surface);
+     border: 1px solid var(--border-input);
+     border-radius: var(--radius);
+ }
+
+ .input::placeholder {
+     color: var(--ink-secondary);
+ }
+
+ .input:focus {
+     outline: none;
+     border-color: var(--border-focus);
+     box-shadow: 0 0 0 1px var(--border-focus);
+ }
+
+ .input[aria-invalid="true"] {
+     border-color: var(--danger);
+ }
+
+ .input[aria-invalid="true"]:focus {
+     border-color: var(--danger);
+     box-shadow: 0 0 0 1px var(--danger);
+ }
+
+ .field-control .input {
+     padding-right: 52px;
+ }
+
+ .field-error {
+     margin: 0;
+     font-size: 12px;
+     line-height: 18px;
+     color: var(--danger-ink);
+ }
+
+ .field-toggle {
+     position: absolute;
+     top: 0;
+     right: 0;
+     display: grid;
+     place-items: center;
+     width: 44px;
+     height: 44px;
+     padding: 0;
+     color: var(--ink-secondary);
+     background: none;
+     border: 0;
+     border-radius: var(--radius);
+     cursor: pointer;
+ }
+
+ .field-toggle .icon-hide {
+     display: none;
+ }
+
+ .field-toggle.is-revealed .icon-show {
+     display: none;
+ }
+
+ .field-toggle.is-revealed .icon-hide {
+     display: block;
+ }
+
+ .btn-primary {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     min-height: 44px;
+     font: inherit;
+     font-size: 14px;
+     font-weight: 700;
+     color: #fff;
+     background: var(--navy);
+     border: 0;
+     border-radius: var(--radius);
+     cursor: pointer;
+ }
+
+ .btn-primary:hover:not(:disabled) {
+     background: var(--navy-hover);
+ }
+
+ .btn-primary:active:not(:disabled) {
+     transform: translateY(1px);
+ }
+
+ .btn-primary:disabled {
+     color: var(--ink-secondary);
+     background: #e9ecef;
+     cursor: not-allowed;
+ }
+
+ .forgot {
+     margin: 0;
+     text-align: center;
+     font-size: 14px;
+     line-height: 22px;
+ }
+
+ .link {
+     color: var(--blue-strong);
+     text-decoration: none;
+ }
+
+ .link:hover {
+     color: var(--blue-strong-hover);
+     text-decoration: underline;
+ }
+
+ .link:focus-visible,
+ .btn-primary:focus-visible {
+     outline: 2px solid var(--border-focus);
+     outline-offset: 2px;
+ }
+
+ .field-toggle:focus-visible {
+     outline: 2px solid var(--border-focus);
+     outline-offset: -4px;
+ }
+
+ .register-row {
+     display: flex;
+     justify-content: center;
+     gap: 4px;
+     font-size: 14px;
+     line-height: 22px;
+     color: var(--ink-secondary);
+ }
+
+ .register-row .link {
+     font-weight: 700;
+ }
+
+ @media (max-width: 768px) {
+     .login {
+         flex-direction: column;
+         background: var(--surface);
+     }
+
+     .login-brand {
+         flex: none;
+         min-height: 240px;
+         justify-content: flex-end;
+         gap: 12px;
+         padding: 24px;
+     }
+
+     .brand-name {
+         font-size: 24px;
+         line-height: 32px;
+     }
+
+     .brand-campus,
+     .brand-mid,
+     .brand-foot {
+         display: none;
+     }
+
+     .brand-tagline {
+         display: block;
+         margin: 0;
+         font-size: 14px;
+         line-height: 22px;
+         color: rgba(255, 255, 255, .85);
+     }
+
+     .login-form {
+         flex: 1;
+         justify-content: flex-start;
+         padding: 16px;
+     }
+
+     .login-card {
+         max-width: none;
+         padding: 0;
+         border: 0;
+         box-shadow: none;
+     }
+ }
