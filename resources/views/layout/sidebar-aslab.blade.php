@@ -23,7 +23,7 @@
 </li>
 
 <li class="nav-item">
-    <a href="{{ route('lab') }}" class="nav-link {{ request()->routeIs('lab') ? 'active' : '' }}">
+    <a href="/lab" class="nav-link {{ request()->is('lab*') ? 'active' : '' }}">
         <i class="nav-icon bi bi-hdd-stack-fill"></i>
         <p>Data Lab</p>
     </a>

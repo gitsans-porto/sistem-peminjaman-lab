@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Enums\LabStatus;
 
 class Lab extends Model
 {
@@ -16,6 +17,10 @@ class Lab extends Model
         'lokasi',
         'status',
         'fasilitas',
+    ];
+
+    Protected $casts = [
+        'status' => LabStatus::class,
     ];
 
     public function jadwalTetaps()
