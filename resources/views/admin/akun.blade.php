@@ -41,7 +41,20 @@
                                 <td>{{ $user->name }}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->nim_nip}}</td>
-                                <td>{{$user->role}}</td>
+                                <td>
+                                @php
+                                    $i=0;
+                                @endphp
+                                @foreach($user->roles as $role)
+                                    @if ($i > 0)
+                                        ||
+                                    @endif
+                                        {{$role->nama_role}}
+                                    @php
+                                    $i++;
+                                    @endphp
+                                @endforeach
+                                </td>
                                 <td>{{$user->kelas_jurusan}}</td>
                                 <td>{{$user->no_wa}}</td>
                                 <td><form method="POST" action="{{ route('admin.delete', ['nim_nip'=>$user->nim_nip])}}"
@@ -87,7 +100,19 @@
                                 <td>{{$user->name }}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->nim_nip}}</td>
-                                <td>{{$user->role}}</td>
+                                <td>
+                                @php
+                                    $i=0;
+                                @endphp
+                                @foreach($user->roles as $role)
+                                    @if ($i > 0)
+                                        ||
+                                    @endif
+                                        {{$role->nama_role}}
+                                    @php
+                                    $i++;
+                                    @endphp
+                                @endforeach</td>
                                 <td>{{$user->kelas_jurusan}}</td>
                                 <td>{{$user->no_wa}}</td>
                                 <td><a href="{{ url('/update-user/'.$user->nim_nip) }}"><button type="button" class="btn btn-info"><i class="bi bi-pencil-square"></i></button></a></td>
