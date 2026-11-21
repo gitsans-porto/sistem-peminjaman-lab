@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.auth')
+@section('title', 'Login')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-
-<body>
-    <div class="login">
-        <div class="login-brand">
-            <div>
-                <p class="brand-name">Peminjaman Lab TES</p>
-                <p class="brand-campus">Kampus 4 Universitas Negeri Gorontalo</p>
-            </div>
-
-            <div class="brand-mid">
-                <p class="brand-headline">Peminjaman Lab Komputer tanpa antre di Ruangan Server</p>
-                <p class="brand-copy">Ajukan sesuai jadwal tetap kelas atau di luar jadwal, pantau persetujuan Aslab,
-                    dan catat pengambilan kunci dengan rapi.</p>
-            </div>
-
-            <p class="brand-foot">Sistem Informasi Peminjaman Lab Komputer</p>
-            <p class="brand-tagline">Sistem Informasi Peminjaman Lab Komputer, Kampus 4 Universitas Negeri Gorontalo.
-            </p>
-        </div>
-
-        <main class="login-form">
-            <div class="login-card">
+@section('content')
+    <div class="login-card">
                 <h1>Masuk</h1>
                 <p class="card-sub">Pakai email dan password akun Anda</p>
                 @if(session('success'))
@@ -90,7 +60,9 @@
 
         </main>
     </div>
-
+@endsection
+            
+@section('script')
     <script>
         const toggleBtn = document.getElementById('toggle-password');
         const passwordInput = document.getElementById('password');
@@ -105,9 +77,10 @@
                 this.setAttribute('aria-label', isPassword ? 'Sembunyikan password' : 'Tampilkan Password');
             });
         }
-
-
+        
     </script>
+@endsection
+    
 </body>
 
 </html>
