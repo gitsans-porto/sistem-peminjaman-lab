@@ -6,16 +6,16 @@
 </li>
 
 <li class="nav-item">
-    <a href="{{ route('mahasiswa.riwayat') }}" class="nav-link {{ request()->routeIs('riwayat') ? 'active' : '' }}">
-        <i class="nav-icon bi bi-clock-history"></i>
-        <p>Riwayat</p>
+    <a href="{{ route('mahasiswa.status-lab') }}" class="nav-link {{ request()->routeIs('status-lab') ? 'active' : '' }}">
+        <i class="nav-icon bi bi-hdd-stack"></i>
+        <p>Status Lab</p>
     </a>
 </li>
 
 <li class="nav-item">
-    <a href="{{ route('mahasiswa.status-lab') }}" class="nav-link {{ request()->routeIs('status-lab') ? 'active' : '' }}">
-        <i class="nav-icon bi bi-hdd-stack"></i>
-        <p>Status Lab</p>
+    <a href="{{ route('mahasiswa.riwayat') }}" class="nav-link {{ request()->routeIs('riwayat') ? 'active' : '' }}">
+        <i class="nav-icon bi bi-clock-history"></i>
+        <p>Riwayat</p>
     </a>
 </li>
 
