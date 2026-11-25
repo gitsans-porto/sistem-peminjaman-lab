@@ -12,4 +12,4 @@
 
 @section('card-body')
     <p>Daftar laboratorium yang sedang tersedia atau maintenance.</p>
-@endsection    
+@endsection
