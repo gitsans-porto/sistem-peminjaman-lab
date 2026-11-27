@@ -41,6 +41,7 @@ Route::middleware(['auth', 'role:Mahasiswa'])->prefix("mahasiswa")->name('mahasi
     Route::get('/status-lab', [MahasiswaController::class, 'statusLab'])->name('status-lab');
     Route::get('/notifikasi', [MahasiswaController::class, 'notifikasi'])->name('notifikasi');
     Route::get('/akun', [MahasiswaController::class, 'akun'])->name('akun');
+    Route::get('/ajukan-peminjaman', [MahasiswaController::class, 'ajukan'])->name('ajukan'); 
 });
 
 //AUTH

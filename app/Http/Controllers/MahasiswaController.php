@@ -11,7 +11,8 @@ class MahasiswaController extends Controller
     public function beranda()
     {
         $mahasiswa = auth()->user();
-        return view('mahasiswa.beranda', compact('mahasiswa'));
+        $labs = Lab::all(); 
+        return view('mahasiswa.beranda', compact('mahasiswa', 'labs'));
     }
 
     public function riwayat()

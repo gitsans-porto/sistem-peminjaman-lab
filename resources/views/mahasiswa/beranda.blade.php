@@ -32,6 +32,18 @@
                 </div>
             </div>
 
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Jadwal tetap kelas Anda hari ini</h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted text-center my-3">Belum ada jadwal tetap untuk hari ini.</p>
+                    <a href="{{ route('mahasiswa.ajukan') }}" class="btn btn-outline-secondary w-100">
+                        Ajukan Baru
+                    </a>
+                </div>
+            </div>
+
                <div class="card mb-4">
                 <div class="card-header">
                     <h5 class="card-title mb-0">Lab tersedia hari ini</h5>
