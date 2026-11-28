@@ -5,7 +5,7 @@
     </a>
 </li>
 <li class="nav-item">
-    <a href="{{ route('aslab.jadwal-tetap') }}" class="nav-link {{ request()->routeIs('aslab.jadwal-tetap') ? 'active' : '' }}">
+    <a href="{{ route('aslab.jadwal-tetap.index') }}" class="nav-link {{ request()->routeIs('aslab.jadwal-tetap.index') ? 'active' : '' }}">
         <i class="nav-icon bi bi-calendar-check-fill"></i>
         <p>Jadwal Tetap</p>
     </a>

@@ -9,6 +9,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RoleSwitchController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\JadwalTetapController;
+
 Route::get('/', [LoginController::class, 'form'])->name('login');
 //ADMIN
 // Route::get('/akun-admin', [AdminController::class, 'akun'])->name('akun-admin');
@@ -31,6 +33,8 @@ Route::middleware(['auth', 'role:Asisten Lab'])->prefix('aslab')->name('aslab.')
     Route::get('/akun', [AslabController::class, 'akun'])->name('akun');
     route::resource('lab', LabController::class);
     Route::patch('/labs/{lab}/toggle', [LabController::class, 'toggle'])->name('labs.toggle');
+
+    Route::resource('jadwal-tetap', JadwalTetapController::class);
 });
 
 
