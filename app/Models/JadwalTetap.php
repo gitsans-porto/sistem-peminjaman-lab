@@ -17,6 +17,7 @@ class JadwalTetap extends Model
         'mata_kuliah',
         'dosen_pengampu',
         'kelas_prodi',
+        'angkatan',
     ];
 
     public function lab()
