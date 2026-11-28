@@ -25,7 +25,23 @@
                 </tr>
             </thead>
             <tbody>
-
+                @forelse ($labs as $lab)
+                    <tr>
+                        <td>{{ $lab->kode_lab }}</td>
+                        <td>{{ $lab->nama_lab }}</td>
+                        <td>
+                            <span
+                                class="badge {{ $lab->status === \App\Enums\LabStatus::Tersedia ? 'bg-succes' : 'bg-warning text-dark'}} px-3 px-2">{{ $lab->status->label() }}</span>
+                        </td>
+                        <td>{{ $lab->kapasitas }}</td>
+                        <td>{{ $lab->lokasi }}</td>
+                        <td>{{ $lab->fasilitas ?? '-' }}</td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="6" class="text-secondary py-4">Belum ada data lab.</td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </div>
