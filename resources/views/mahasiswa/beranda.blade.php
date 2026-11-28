@@ -34,7 +34,7 @@
                             </div>
                             <div>
                                 @if ($peminjamanAktif->status === 'disetujui')
-                                    <span class="badge px-3 py-2 rounded-2" style="background-color: #d1fae5; color: #065f46; font-weight: 500;">
+                                    <span class="badge bg-success-subtle text-success-emphasis px-3 py-2 rounded-2">
                                         Disetujui
                                     </span>
                                 @elseif ($peminjamanAktif->status === 'pending')
@@ -50,18 +50,26 @@
                             <div class="fw-bold text-dark">{{ $peminjamanAktif->lab->nama_lab }}</div>
                         </div>
 
-                        <div class="row g-2">
-                            <div class="col-md-6">
-                                <button type="button" class="btn w-100 py-2 text-white fw-medium" style="background-color: #001F3F;">
-                                    Ambil Kunci
-                                </button>
+                        @if ($peminjamanAktif->status === 'disetujui')
+                            <div class="row g-2">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn w-100 py-2 text-white fw-medium" style="background-color: #001F3F;">
+                                        Ambil Kunci
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-outline-danger w-100 py-2 fw-medium">
+                                        Batalkan
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-md-6">
+                        @else
+                            <div>
                                 <button type="button" class="btn btn-outline-danger w-100 py-2 fw-medium">
                                     Batalkan
                                 </button>
                             </div>
-                        </div>
+                        @endif
                     @else
                         <div class="text-center py-4">
                             <i class="bi bi-inbox fs-1 text-secondary mb-2 d-block"></i>
